@@ -17,7 +17,6 @@ menu(){
   else{
     this.bool=false
     div?.classList.remove("afterclick")
-
   }
 }
 }
