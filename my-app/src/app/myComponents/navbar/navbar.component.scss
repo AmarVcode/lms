@@ -1,0 +1,80 @@
+header{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    background: black;
+    position: sticky;
+    top: 0;
+    &>div{
+        display: flex;
+        align-items:center ;
+        justify-content: space-around;
+    }
+    nav{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        a{
+            display: block;
+            text-decoration: none;
+            color: white;
+            padding: 1em 2em;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: 1s;
+            background: linear-gradient(to left,black,black, white,white);
+            background-position: right;
+            background-size: 400%;
+        }
+        a:hover{
+             background-color: white;
+             color: black;
+             background-position: left;
+        }
+    }
+    svg{
+        width: 1rem;
+        fill: white;
+        cursor: pointer;
+        margin: 1rem;
+    }
+}
+
+#menu{
+    visibility: hidden;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width:500px) {
+
+    header{
+        grid-template-columns: 100%;
+    }
+    #menu{
+        visibility: visible;
+        margin-left: 80%;
+    }
+    
+    .beforeclick{
+        top: 50px;
+        position: absolute;
+        display: grid !important;
+        grid-template-columns: 100%;
+        transform-origin: top;
+        transform: scale(1,0);
+        transition: 1s;
+        overflow: hidden;
+    }
+
+    .afterclick{
+        transform: scale(1,1);
+        
+    }
+}
