@@ -7,7 +7,7 @@ export default class SampletestService {
 
   constructor() { }
 
-  sampletest() {
+  test() {
     return [
 
       {

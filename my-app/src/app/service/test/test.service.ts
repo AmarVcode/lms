@@ -14,7 +14,8 @@ typetest(){
       testname:"Sample Test",
       noOfQuestion:8,
       abouttest:["genral Knowledge","Simple Question"],
-      marks:80
+      marks:80,
+      calltest:"SampletestService"
     }
   ]
 }

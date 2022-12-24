@@ -1,1 +1,25 @@
-<p>test works!</p>
+<main>
+    <div class="grid" >
+<div *ngFor="let items of test">
+    <h2>
+        {{items.testname}}
+    </h2>
+    <h3>
+        No. of Question : {{items.noOfQuestion}}
+    </h3>
+    <h3>
+        Total Marks : {{items.marks}}
+    </h3>
+      <h3>
+            About
+        </h3>
+    <ul  *ngFor="let mini of items.abouttest">
+      
+        <li>{{mini}}</li>
+    </ul>
+    <a class="apply">
+        Apply
+    </a>
+</div>
+    </div>
+</main>
