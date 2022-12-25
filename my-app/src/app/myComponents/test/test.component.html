@@ -8,6 +8,9 @@
         No. of Question : {{items.noOfQuestion}}
     </h3>
     <h3>
+        Marks For Each Question : {{items.marksperquestion}}
+    </h3>
+    <h3>
         Total Marks : {{items.marks}}
     </h3>
       <h3>
@@ -17,7 +20,7 @@
       
         <li>{{mini}}</li>
     </ul>
-    <a class="apply">
+    <a class="apply" routerLink="exam" (click)="storeexam(items.testname)">
         Apply
     </a>
 </div>

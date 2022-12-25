@@ -11,6 +11,7 @@ import { SubmissionComponent } from './myComponents/submission/submission.compon
 import { DashboardComponent } from './myComponents/dashboard/dashboard.component';
 import { HomeComponent } from './myComponents/home/home.component';
 import SampletestService from './service/sampletest/sampletest.service';
+import { ExamComponent } from './myComponents/exam/exam.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import SampletestService from './service/sampletest/sampletest.service';
     TestComponent,
     SubmissionComponent,
     DashboardComponent,
-    HomeComponent
+    HomeComponent,
+    ExamComponent
   ],
   imports: [
     BrowserModule,
