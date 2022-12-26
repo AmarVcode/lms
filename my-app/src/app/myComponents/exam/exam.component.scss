@@ -1,9 +1,49 @@
 .bg{
     width: 100%;
     display: flex;
+    border: 1px solid black;
+    text-align: right;
+    bottom: 0;
 }
 
 #hidden{
     width: 13px;
     display: none;
+}
+
+.form{
+    border: 2px solid black;
+    border-bottom: 5px double black;
+    max-width: 400px;
+    margin: auto;
+    padding: 1em;
+    border-radius: 10px;
+    input{
+        width: 100%;
+        padding: 1em;
+        font-size: 1rem;
+        border-radius: 5px;
+        border: 2px solid black;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    button{
+        width: 100%;
+        font-size: 1.2rem;
+        padding: 1em;
+        border: 3px solid black;
+        background: linear-gradient(to right,white,white,black,black);
+        background-size: 400%;
+        border-radius: 10px;
+        font-weight: 600;
+        background-position: right;
+        color: white;
+        transition: 1s;
+        cursor: pointer;
+    }
+    button:hover{
+        background-position: left;
+        color: black;
+    }
 }
