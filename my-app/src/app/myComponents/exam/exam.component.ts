@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import SampletestService from 'src/app/service/sampletest/sampletest.service';
+import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-exam',
@@ -9,6 +10,10 @@ import SampletestService from 'src/app/service/sampletest/sampletest.service';
 export class ExamComponent {
 
   public exam:any = []
+  public time:boolean=true
+  public markseach:number=0
+  public count=0
+
 
 showtime(){
   let date =new Date()
@@ -127,9 +132,13 @@ switch(todaymonth){
 
 div.append(yeartag,monthtag,datetag,daytag,hourstag,mintag,sectag,milisectag)
 let d:any= document.getElementById("datehere")
-d.innerHTML=null
 
-document.getElementById("datehere")?.append(div)
+
+if(this.time===true){
+  d.innerHTML=null
+  document.getElementById("datehere")?.append(div)
+  this.time=false
+}
 }
 
 
@@ -142,17 +151,32 @@ document.getElementById("datehere")?.append(div)
 
 
 //taking data with local storage for fetching sampletest service properly
-public testtype=localStorage.getItem("exam")
+public testtype:any=localStorage.getItem("exam")
+
 
 constructor(private test:SampletestService){
-  if(this.testtype==="test"){
+  this.testtype=JSON.parse(this.testtype)
+  let type:any=this.testtype.calltest
+  this.markseach=this.testtype.marksperquestion
+  console.log(this.markseach)
+  if(type==="test"){
       this.exam=test.test()
     }
     // console.log(this.exam)
 }
 
 
+check(c:any,a:any,q:any){
+console.log(c,a)
+let btn:any=document.getElementById(q);
+btn.style.display="none"
+if(c===a){
+  this.count=this.markseach+this.count
+  console.log(this.count)
+}
 
+
+}
 
 
 

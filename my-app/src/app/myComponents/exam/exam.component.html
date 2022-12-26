@@ -4,10 +4,22 @@
     <button (click)="showtime()">
         Start
     </button>
-    <div id="datehere">
+    <div id="datehere" class="data">
 
-
-        
     </div>
 </div>
+
+<div class="question">
+    <ul>
+        <li *ngFor="let item of exam" id="{{item.question}}" class="quest">
+{{item.question}}
+<div class="block">
+<button id="btncolor"*ngFor="let i of item.option" id="{{i}}"  name="item.correct" (click)="check(item.correct,i,item.question)">
+    {{i}}
+</button>
+</div>
+        </li>
+    </ul>
+</div>
+
 </main>

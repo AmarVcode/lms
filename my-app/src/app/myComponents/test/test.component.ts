@@ -9,22 +9,22 @@ import  SampletestService  from 'src/app/service/sampletest/sampletest.service';
 })
 export class TestComponent {
   public test: any = []
-  public test2:any =[]
 
-  storeexam(test:any){
-    localStorage.setItem("exam",test)
-  }
-
-
-
-
-
+  
+  
+  
+  
+  
   constructor(private testtype: TestService) {
-      this.test = this.testtype.typetest()
+    this.test = this.testtype.typetest()
       console.log(this.test)
   }
 
+  storeexam(t:any){
+    t=JSON.stringify(t)
+    localStorage.setItem("exam",t)
+  }
 
-
+  
 
 }

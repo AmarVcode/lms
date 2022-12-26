@@ -47,25 +47,25 @@ export default class SampletestService {
       },
       {
         id:7,
-        question:"Which is Biggest Cat in world",
+        question:"Which is Biggest Cat in world ?",
         option:["Siberian tiger","lion","jaguar","puma"],
         correct: "Siberian tiger"
       },
       {
         id:8,
-        question:"How Many Vowels in Engliah Alphabets",
+        question:"How Many Vowels in Engliah Alphabets ?",
         option:[3,5,7,11],
         correct: 5
       },
       {
         id:9,
-        question:"How Many Basic Operator In Maths",
+        question:"How Many Basic Operator In Maths ?",
         option:[1,2,3,4],
         correct: 4
       },
       {
         id:10,
-        question:"How many Letter in 'Letters'",
+        question:"How many Letter in 'Letters' ?",
         option:[6,8,1,7],
         correct: 7
       }
@@ -114,25 +114,25 @@ export default class SampletestService {
       },
       {
         id:7,
-        question:"Which is Biggest Cat in world",
+        question:"Which is Biggest Cat in world ?",
         option:["Siberian tiger","lion","jaguar","puma"],
         correct: "Siberian tiger"
       },
       {
         id:8,
-        question:"How Many Vowels in Engliah Alphabets",
+        question:"How Many Vowels in Engliah Alphabets ?",
         option:[3,5,7,11],
         correct: 5
       },
       {
         id:9,
-        question:"How Many Basic Operator In Maths",
+        question:"How Many Basic Operator In Maths ?",
         option:[1,2,3,4],
         correct: 4
       },
       {
         id:10,
-        question:"How many Letter in 'Letters'",
+        question:"How many Letter in 'Letters' ?",
         option:[6,8,1,7],
         correct: 7
       }
