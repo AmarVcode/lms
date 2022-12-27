@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import SampletestService from 'src/app/service/sampletest/sampletest.service';
 import { NgFor } from '@angular/common';
+import { empty } from 'rxjs';
 
 @Component({
   selector: 'app-exam',
@@ -12,9 +13,11 @@ export class ExamComponent {
   public exam:any = []
   public time:boolean=true
   public markseach:number=0
+  public total:number=0
   public count=0
-
-
+  public username=""
+  public saved=""
+  public local=true
 showtime(){
   let date =new Date()
 
@@ -123,7 +126,8 @@ switch(todaymonth){
   yeartag.innerText=todayyear
   
 
-
+  let savedtime=todayyear+" - "+todaymonth+" - "+todaydate+" - "+todayday+" - "+hours+" - "+min+" - "+sec+" - "+milisec
+  this.saved=savedtime
 
 
 
@@ -132,8 +136,9 @@ switch(todaymonth){
 
 div.append(yeartag,monthtag,datetag,daytag,hourstag,mintag,sectag,milisectag)
 let d:any= document.getElementById("datehere")
-
-
+let user:any=document.getElementById("username")
+user=user.value
+this.username=user
 if(this.time===true){
   d.innerHTML=null
   document.getElementById("datehere")?.append(div)
@@ -159,26 +164,67 @@ constructor(private test:SampletestService){
   let type:any=this.testtype.calltest
   this.markseach=this.testtype.marksperquestion
   this.title=this.testtype.testname
-  console.log(this.markseach)
+  this.total=this.testtype.marks
   if(type==="test"){
       this.exam=test.test()
+    }
+  else if(type==="htmltest"){
+      this.exam=test.htmltest()
     }
     // console.log(this.exam)
 }
 
 
 check(c:any,a:any,q:any){
-console.log(c,a)
+  if(this.username!==""){
+
+  
 let btn:any=document.getElementById(q);
 btn.style.display="none"
+
+let ans=document.getElementById("ans")
+
+let h3=document.createElement("h3")
+h3.innerHTML=q+" --------> "+a
+
+ans?.append(h3)
 if(c===a){
   this.count=this.markseach+this.count
-  console.log(this.count)
 }
 
 
 }
 
 
+}
+
+
+
+
+onsub(){
+  let obj={
+    user:this.username,
+    test:this.testtype.testname,
+    totalmarks:this.total,
+    gotmarks:this.count,
+    time:this.saved
+  }
+let data:any=[]
+let store:any=localStorage.getItem("examinfo")
+  store=JSON.parse(store)
+  
+  store=store||data
+
+
+  store.push(obj)
+  store=JSON.stringify(store)
+  
+  if(this.local===true){
+    localStorage.setItem("examinfo",store)
+    this.local=false
+  }
+window.scroll(0,0)
+location.reload()
+}
 
 }

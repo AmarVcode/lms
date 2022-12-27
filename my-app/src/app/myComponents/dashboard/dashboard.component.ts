@@ -7,4 +7,20 @@ import { Component } from '@angular/core';
 })
 export class DashboardComponent {
 
+
+  store:any=localStorage.getItem("examinfo")
+
+  public data:any=JSON.parse(this.store)||[]
+  
+
+ 
+
+  constructor(){
+    console.log(this.data)
+  this.data.sort((a:any, b:any) => {
+    return b.gotmarks - a.gotmarks;
+});
+  }
+  
+
 }

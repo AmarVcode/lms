@@ -1,6 +1,6 @@
 <main>
 <div class="form" id="frm">
-    <input type="text" id="username" placeholder="Type Your Name">
+    <input type="text" id="username" placeholder="Type Your Name" value="">
     <button (click)="showtime()">
         Start
     </button>
@@ -11,6 +11,11 @@
 <h1>
     {{title}}
 </h1>
+
+<div class="answer" id="ans">
+
+</div>
+
 <div class="question">
     <div class="maindiv">
         <div *ngFor="let item of exam" id="{{item.question}}" class="quest">
@@ -24,10 +29,12 @@
 </div>
 </div>
 
-
+<div class="got" id="got">
+You Got Total {{count}} Marks Out Of {{total}}
+</div>
 
 <div class="last">
-    <button class="submit">
+    <button class="submit" (click)="onsub()">
         Submit
     </button>
 </div>

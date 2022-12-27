@@ -19,4 +19,10 @@ menu(){
     div?.classList.remove("afterclick")
   }
 }
+
+
+
+scroll(){
+  window.scroll(0,0)
+}
 }

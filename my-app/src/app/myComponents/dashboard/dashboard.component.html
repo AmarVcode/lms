@@ -1,1 +1,19 @@
-<p>dashboard works!</p>
+
+<main>
+    <div id="show" >
+<div *ngFor="let item of data" class="cont">
+    <h2>
+        Candidate Username is {{item.user}}
+    </h2>
+    <h3>
+        Test Name is {{item.test}}
+    </h3>
+    <h3>
+        Got {{item.gotmarks}} Out Of {{item.totalmarks}}
+    </h3>
+    <h4>
+        Test Start at --> {{item.time}}
+    </h4>
+</div>
+    </div>
+</main>

@@ -84,3 +84,35 @@ list-style: none;
 }
 
 }
+
+.last{
+    width: 100%;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .submit{
+        padding: 1em 4em;
+        font-size: 1.2rem;
+        border: 2px solid black;
+        font-weight: 600;
+        background: linear-gradient(to right,black,black,white,white);
+        border-radius: 10px;
+        background-size: 500%;
+        background-position: left;
+        color: white;
+        transition: 1s;
+        cursor: pointer;
+    }
+    .submit:hover{
+        background-position: right;
+        color: black;
+    }
+}
+
+.got{
+    color: red;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 600;
+}
