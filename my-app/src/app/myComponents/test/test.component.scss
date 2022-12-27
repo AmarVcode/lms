@@ -1,23 +1,25 @@
 .grid{
     width: 100%;
     display: grid;
-    grid-template-columns: 33.33% 33.33% 33.34%;
+    grid-template-columns: 50% 50%;
+    color: brown;
     div{
-        border: 1px solid grey;
+        border: 2px solid red;
         padding: 1em;
         margin: .5em;
         border-radius: 10px;
-            transition: 500ms;
+        transition: 500ms;
         
         h2{
             font-size: 1.2rem;
             font-weight: 600;
             text-align: center;
-            border: 1px solid black;
-            border-bottom: 5px double black;
+            border: 2px solid red;
+            border-bottom: 5px double red;
             padding: 1em;
             border-radius: 10px;
             transition: 500ms;
+            color: red;
         }
         h3{
             font-weight: 600;
@@ -29,7 +31,7 @@
 
 
 .apply{
-    border: 2px solid white;
+    color: black;
     width: 100%;
     display: block;
     text-decoration: none;
@@ -37,19 +39,17 @@
     text-align: center;
     font-weight: 600;
     border-radius: 10px;
-    animation: apply 1s infinite alternate ease-in-out;
-    color: white;
-    background-color: black;
-    box-shadow: 0px 0px 0px black inset,0px 0px 10px black;
+    border: 3px solid rgb(0, 0, 0);
     cursor: pointer;
-    transition: 500ms;
+    transition: 500ms; 
+    background-color: yellow;
+    box-shadow: 0px 0px 0px yellow,0px 0px 0px yellow,0px 0px 0px yellow,0px 0px 0px yellow,0px 0px 0px yellow,0px 0px 0px yellow,0px 0px 0px yellow,0px 0px 0px yellow,0px 0px 0px yellow,0px 0px 0px yellow,0px 0px 0px yellow,0px 0px 0px yellow;
+
+  
 }
 
 
 .apply:hover{
-    transform: rotateZ(-10deg) scale(2);
-    color: black;
-    border-color: black;
-    background-color: white;
-    box-shadow: 0px 0px 10px black inset,0px 0px 10px black;
+    box-shadow: 5px 15px 0px red,10px 25px 0px orange,15px 35px 0px yellow,5px -15px 0px red,10px -25px 0px orange,15px -35px 0px yellow,20px -45px 0px red,25px -55px 0px orange,30px -65px 0px yellow,20px 45px 0px red,25px 55px 0px orange,30px 65px 0px yellow;;
+    
 }

@@ -2,7 +2,7 @@ header{
     width: 100%;
     display: grid;
     grid-template-columns: auto auto;
-    background: black;
+    background: orange;
     position: sticky;
     top: 0;
     &>div{
@@ -17,12 +17,12 @@ header{
         a{
             display: block;
             text-decoration: none;
-            color: white;
+            color: black;
             padding: 1em 2em;
             font-size: 1rem;
             font-weight: 600;
             transition: 1s;
-            background: linear-gradient(to left,black,black, white,white);
+            background: linear-gradient(to left,orange,orange, white,white);
             background-position: right;
             background-size: 400%;
         }
