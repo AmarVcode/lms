@@ -8,18 +8,31 @@
 
     </div>
 </div>
-
+<h1>
+    {{title}}
+</h1>
 <div class="question">
-    <ul>
-        <li *ngFor="let item of exam" id="{{item.question}}" class="quest">
-{{item.question}}
+    <div class="maindiv">
+        <div *ngFor="let item of exam" id="{{item.question}}" class="quest">
+{{item.id}}. {{item.question}}
 <div class="block">
 <button id="btncolor"*ngFor="let i of item.option" id="{{i}}"  name="item.correct" (click)="check(item.correct,i,item.question)">
     {{i}}
 </button>
 </div>
-        </li>
-    </ul>
 </div>
+</div>
+</div>
+
+
+
+<div class="last">
+    <button class="submit">
+        Submit
+    </button>
+</div>
+
+
+
 
 </main>

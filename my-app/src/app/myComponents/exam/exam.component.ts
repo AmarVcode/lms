@@ -8,7 +8,7 @@ import { NgFor } from '@angular/common';
   styleUrls: ['./exam.component.scss']
 })
 export class ExamComponent {
-
+  public title:string=""
   public exam:any = []
   public time:boolean=true
   public markseach:number=0
@@ -158,6 +158,7 @@ constructor(private test:SampletestService){
   this.testtype=JSON.parse(this.testtype)
   let type:any=this.testtype.calltest
   this.markseach=this.testtype.marksperquestion
+  this.title=this.testtype.testname
   console.log(this.markseach)
   if(type==="test"){
       this.exam=test.test()
