@@ -13,7 +13,6 @@ export class SubmissionComponent {
   public data:any=JSON.parse(this.store)||[]
   constructor(){
     this.data=this.data.reverse()
-    console.log(this.data)
   }
   
 

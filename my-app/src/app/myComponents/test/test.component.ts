@@ -17,7 +17,6 @@ export class TestComponent {
   
   constructor(private testtype: TestService) {
     this.test = this.testtype.typetest()
-      console.log(this.test)
   }
 
   storeexam(t:any){

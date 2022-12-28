@@ -56,7 +56,7 @@ switch(todayday){
     todayday="Sunday"
 }
 
-  let todaymonth:any=date.getMonth()
+  let todaymonth:any=date.getMonth()+1
 switch(todaymonth){
   case 1:
     todaymonth="January"
@@ -91,14 +91,10 @@ switch(todaymonth){
   case 11:
     todaymonth="November"
     break;
-  default:
+  case 12:
     todaymonth="December"
 }
-
   let todayyear:any=date.getFullYear()
-
-  console.log(todayyear)
-
   let div=document.createElement("div")
   let milisectag:any=document.createElement("h3")
   milisec="Millieconds "+milisec

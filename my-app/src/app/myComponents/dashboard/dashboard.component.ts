@@ -16,7 +16,6 @@ export class DashboardComponent {
  
 
   constructor(){
-    console.log(this.data)
   this.data.sort((a:any, b:any) => {
     return b.gotmarks - a.gotmarks;
 });
