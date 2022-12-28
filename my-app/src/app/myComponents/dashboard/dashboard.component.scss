@@ -3,10 +3,29 @@
    padding: 1em;
    border-radius: 10px;
    margin: 1em;
-   h2,h3,h4{
-       font-weight: 500;
-   }
-   h4{
-       color: red;
-   }
+   color: black;
+}
+
+.cont:nth-child(2){   
+    border: 3px solid red;
+   padding: 1em;
+   border-radius: 10px;
+   margin: 1em;
+   color: red;
+}
+
+.cont:nth-child(3){   
+    border: 3px solid brown;
+   padding: 1em;
+   border-radius: 10px;
+   margin: 1em;
+   color: brown;
+}
+
+.cont:nth-child(1){   
+    border: 3px solid green;
+   padding: 1em;
+   border-radius: 10px;
+   margin: 1em;
+   color: green;
 }
